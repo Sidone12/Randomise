@@ -1,9 +1,12 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  devtools: {enabled: true},
+  // https://github.com/nuxt-themes/docus
   extends: ['@nuxt-themes/docus'],
-  runtimeConfig: {
-    apiNinjaKey: process.env.apiNinjaKey,
-  },
-});
+  devtools: { enabled: true },
+
+  modules: [
+    // Remove it if you don't use Plausible analytics
+    // https://github.com/nuxt-modules/plausible
+    '@nuxtjs/plausible'
+  ],
+  compatibilityDate: '2024-10-24'
+})
